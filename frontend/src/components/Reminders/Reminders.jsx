@@ -1,6 +1,5 @@
-import 'Reminders.css';
-
+import './Reminders.css'
 export default function Login() {
-    <p>Implement Reminders</p>
+    return (<p>Implement Reminders</p>)
 
 }

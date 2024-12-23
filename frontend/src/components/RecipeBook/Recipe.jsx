@@ -1,5 +1,5 @@
-import 'Recipe.css';
+import './Recipe.css';
 
 export default function Recipe() {
-    <p>Implement Recipe</p>
+    return (<p>Implement Recipe</p>)
 }

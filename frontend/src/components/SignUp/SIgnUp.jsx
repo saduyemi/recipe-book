@@ -1,6 +1,6 @@
-import 'SignUp.css';
+import './SignUp.css';
 
 export default function SignUp() {
-    <p>Implement SignUp</p>
+    return (<p>Implement SignUp</p>)
 
 }

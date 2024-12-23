@@ -1,5 +1,5 @@
-import 'Home.css';
+import './Home.css';
 
 export default function Home() {
-    <p>Implement Home</p>
+    return (<p>Implement Home</p>);
 }

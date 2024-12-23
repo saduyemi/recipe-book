@@ -1,6 +1,5 @@
-import 'Settings.css';
-
+import './Settings.css'
 export default function Settings() {
-    <p>Implement Settings</p>
+    return (<p>Implement Settings</p>)
 
 }
