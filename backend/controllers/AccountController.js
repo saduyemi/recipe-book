@@ -21,7 +21,14 @@ module.exports.createaccount_post = async (req, res) => {
 module.exports.findaccount_post = async (req, res) =>  {
     try {
         let user = await Account.findOne({email: req.body.email});
-        res.status(200).json(user);
+
+        let isValid = await bcrypt.compare(req.body.password, user.password);
+
+        if (isValid) {
+            res.status(200).json(user);
+        } else {
+            res.status(400).json({error_message: "Error: Incorrect Password"});
+        }
     } catch (err) {
         res.status(404).json({message: err.message});
     }
