@@ -7,7 +7,6 @@ module.exports.createaccount_post = async (req, res) => {
     const salt = await bcrypt.genSalt();
     const hashed = await bcrypt.hash(password, salt);
 
-    console.log(hashed);
     let accnt = new Account({username, email, password: hashed});
     
     try {
@@ -22,8 +21,11 @@ module.exports.findaccount_post = async (req, res) =>  {
     try {
         let user = await Account.findOne({email: req.body.email});
 
-        let isValid = await bcrypt.compare(req.body.password, user.password);
+        if (!user) {
+            return res.status(404).json({error_message: "Error: User Not Found"});
+        }
 
+        let isValid = await bcrypt.compare(req.body.password, user.password);
         if (isValid) {
             res.status(200).json(user);
         } else {
