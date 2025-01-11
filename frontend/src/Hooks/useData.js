@@ -17,7 +17,7 @@ async function getData() {
             throw({error_message: err.message, error: true})
         }
     } else {
-        throw({error_message: 'User Not Authenticated', error: ture});
+        throw({error_message: 'User Not Authenticated', error: true});
     }
 }
 
