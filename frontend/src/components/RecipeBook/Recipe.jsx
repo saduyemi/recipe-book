@@ -1,5 +1,15 @@
+import SideBar from '../SideBar/SiderBar';
 import './Recipe.css';
 
 export default function Recipe() {
-    return (<p>Implement Recipe</p>)
+    return (
+        <>
+            <div id='recipeRoot'>
+                <SideBar/>
+                <div id='recipeContainer'>
+                    
+                </div>
+            </div>
+        </>
+    )
 }

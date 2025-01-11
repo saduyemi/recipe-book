@@ -1,0 +1,46 @@
+#recentsContainer {
+    width: 96%;
+    height: 39%;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    background-color: #f5f5f5;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#recentMealsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#recentMealsList > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfe6e9;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); 
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 8px; 
+}
+
+#recentMealsList > li:hover {
+    background: linear-gradient(145deg, #f0f0f0, #e8e8e8); 
+    transform: scale(1.02); 
+}
+
+#recentMealsList > li > p {
+    margin: 0;
+    font-size: 16px;
+    color: #2d3436;
+}
+
+#recentMealsList > li > p:first-child {
+    font-weight: bold;
+    color: #0984e3; 
+}

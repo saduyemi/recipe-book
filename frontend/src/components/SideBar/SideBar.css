@@ -1,0 +1,60 @@
+/* SideBar.css */
+
+#sidebar {
+    width: 20%;
+    height: 100%; /* Full height */
+    background-color: #f4f4f4; /* Neutral background */
+    border: 1px solid #ddd; /* Subtle border */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Sidebar list */
+#sidelist {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+#sidelist li {
+    margin-bottom: 1rem; /* Space between items */
+    padding: 0.5rem 1rem; /* Padding for better clickability */
+    border-radius: 5px; /* Rounded corners for each item */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight */
+    color: #333; /* Neutral text color */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover and active states */
+#sidelist li:hover {
+    background-color: #ddd; /* Highlight on hover */
+    color: #000; /* Darker text */
+}
+
+#sidelist li:active {
+    background-color: #bbb; /* Darker background on click */
+}
+
+/* Reset paragraph inside list items */
+#sidelist li p {
+    margin: 0;
+}
+
+/* Add scrollbar styling if needed */
+#sidebar::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #ccc; /* Thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #aaa; /* Darker on hover */
+}
