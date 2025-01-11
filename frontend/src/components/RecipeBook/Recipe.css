@@ -4,3 +4,49 @@
     display: flex;
     flex-direction: row;
 }
+
+#recipeContainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#recipes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); /* Auto-fill with a minimum card size of 228px */
+    grid-gap: 15px; /* Space between the cards */
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.recipe-card {
+    height: 250px;
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for "lifted" look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.recipe-card p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+}

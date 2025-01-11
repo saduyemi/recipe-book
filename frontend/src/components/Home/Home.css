@@ -7,8 +7,8 @@
 }
 #homeContainer {
     display: flex;
-    /* border: 1px dashed black; */
-    width: 100%;
+    /* border: 1px dashed black;  */
+    width: 80%; 
     height: 100%;
 }
 

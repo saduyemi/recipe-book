@@ -1,8 +1,10 @@
-import { useState, useEffect, createContext, useContext } from 'react'
+import { useState, useEffect, createContext } from 'react'
 import './App.css'
 
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
+import { createCustomEvent } from '../public/customevent'
+import useData from './hooks/useData'
 
 import DefaultHandler from './components/DefaultHandler'
 import SignUp from './components/SignUp/SignUp'
@@ -14,14 +16,18 @@ import Recipe from './components/RecipeBook/Recipe'
 import Reminders from './components/Reminders/Reminders'
 import Settings from './components/Settings/Settings'
 
-export const LoginContext = createContext(null);
+export const DataContext = createContext(null);
 
 function App() {
-  const { isAuthenticated } = useAuth0();
+  useEffect(() => {
+    createCustomEvent('data', 'Event related to initialzing and refreshing user data for application');
+  }, []);
+
+  const userData = useData();
 
   return (
     <>
-      <LoginContext.Provider value={{}}>
+      <DataContext.Provider value={{userData}}>
        
         <Router>
           <Navbar/>
@@ -37,7 +43,7 @@ function App() {
             <Route path='/settings' element={<Settings/>} />
           </Routes>
         </Router>
-      </LoginContext.Provider>
+      </DataContext.Provider>
     </>
   )
 }
